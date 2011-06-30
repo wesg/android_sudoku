@@ -18,3 +18,9 @@ bin/classes.dex
 bin/Sudoku.apk
 
 bin/org/example/sudoku/R$id.class
+
+bin/org/example/sudoku/R$color.class
+
+.gitignore
+
+.gitignore
