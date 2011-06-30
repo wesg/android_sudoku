@@ -16,3 +16,5 @@ bin/org/example/sudoku/R$attr.class
 bin/classes.dex
 
 bin/Sudoku.apk
+
+bin/org/example/sudoku/R$id.class
