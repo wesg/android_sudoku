@@ -24,3 +24,5 @@ bin/org/example/sudoku/R$color.class
 .gitignore
 
 .gitignore
+
+bin/org/example/sudoku/About.class
