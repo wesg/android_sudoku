@@ -5,7 +5,11 @@ import android.os.Bundle;
 
 import android.content.Intent;
 import android.view.View;
-import android.view.View.OnClickListener;;
+import android.view.View.OnClickListener;
+
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuInflater;
 
 public class Sudoku extends Activity implements OnClickListener {
     /** Called when the activity is first created. */
@@ -33,4 +37,23 @@ public class Sudoku extends Activity implements OnClickListener {
     		break;
     	}
     }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+    	super.onCreateOptionsMenu(menu);
+    	MenuInflater inflater = getMenuInflater();
+    	inflater.inflate(R.menu.menu, menu);
+    	return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	switch (item.getItemId()) {
+    	case R.id.settings:
+    		startActivity(new Intent(this, Prefs.class));
+    		return true;
+    	}
+    	return false;
+    }
+    
 }

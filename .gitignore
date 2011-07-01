@@ -26,3 +26,9 @@ bin/org/example/sudoku/R$color.class
 .gitignore
 
 bin/org/example/sudoku/About.class
+
+bin/org/example/sudoku/R$xml.class
+
+bin/org/example/sudoku/R$menu.class
+
+bin/org/example/sudoku/Prefs.class
