@@ -36,3 +36,7 @@ bin/org/example/sudoku/Prefs.class
 bin/org/example/sudoku/R$array.class
 
 bin/org/example/sudoku/Sudoku$1.class
+
+bin/org/example/sudoku/Game.class
+
+bin/org/example/sudoku/PuzzleView.class
