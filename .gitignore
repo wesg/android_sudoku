@@ -40,3 +40,5 @@ bin/org/example/sudoku/Sudoku$1.class
 bin/org/example/sudoku/Game.class
 
 bin/org/example/sudoku/PuzzleView.class
+
+bin/org/example/sudoku/R$anim.class
