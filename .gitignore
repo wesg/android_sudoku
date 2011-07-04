@@ -42,3 +42,7 @@ bin/org/example/sudoku/Game.class
 bin/org/example/sudoku/PuzzleView.class
 
 bin/org/example/sudoku/R$anim.class
+
+bin/org/example/sudoku/Keypad.class
+
+bin/org/example/sudoku/Keypad$1.class

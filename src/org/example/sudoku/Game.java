@@ -34,13 +34,12 @@ public class Game extends Activity {
 		puzzleView.requestFocus();
 	}
 
-//	private void calculateUsedTiles() {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//
-//	private int[] getPuzzle(int diff) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	protected void showKeypadOrError(int x, int y) {
+		int tiles[] = getUsedTiles(x, y);
+		if (tiles.length == 9) {
+			Toast toast = Toast.makeText(this, R.string.no_moves_label, Toast.LENGTH_SHORT);
+			toast.setGravity(Gravity.CENTER, 0, 0);
+			toast.show();
+		}
+	}
 }

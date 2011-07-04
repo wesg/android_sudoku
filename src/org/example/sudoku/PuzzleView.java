@@ -205,7 +205,7 @@ public class PuzzleView extends View {
 		return true;
 	}
 	
-	private void setSelectedTile(int tile) {
+	public void setSelectedTile(int tile) {
 		if (game.setTileIfValid(selX, selY, tile)) {
 			invalidate(); // may change hints
 		}
