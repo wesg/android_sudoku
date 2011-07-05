@@ -28,9 +28,10 @@ public class Keypad extends Dialog {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setTitle(R.string.keypad);
+		setTitle(R.string.keypad_title);
+		setContentView(R.layout.keypad);
 		findViews();
-		for (int elements : useds) {
+		for (int element : useds) {
 			if (element != 0) {
 				keys[element  -1].setVisibility(View.INVISIBLE);
 			}

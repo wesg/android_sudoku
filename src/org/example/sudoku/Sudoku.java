@@ -19,6 +19,7 @@ public class Sudoku extends Activity implements OnClickListener {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
+    	Log.d("Sudoku: ", "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
