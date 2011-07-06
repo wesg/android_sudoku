@@ -3,10 +3,8 @@ package org.example.sudoku;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Toast;
 
 public class Keypad extends Dialog {
 
@@ -61,6 +59,10 @@ public class Keypad extends Dialog {
 				}			
 			});
 		}
+		keypad.setOnClickListener(new View.OnClickListener(){
+	         public void onClick(View v) {
+	            returnResult(0);
+	         }});
 	}
 	
 	@Override

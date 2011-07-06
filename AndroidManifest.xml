@@ -20,7 +20,7 @@
         	android:theme="@android:style/Theme.Dialog"></activity>
 		<activity android:name=".Prefs"
         	android:label="@string/settings_title" />
-        <activity android:name=".Game"
+        <activity android:name="org.example.sudoku.Game"
         	android:label="@string/game_title" />
     </application>
 </manifest>

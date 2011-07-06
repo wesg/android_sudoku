@@ -34,8 +34,8 @@ public class PuzzleView extends View {
 	
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-		width = w;
-		height = h;
+		width = w / 9f;
+		height = h / 9f;
 		getRect(selX, selY, selRect);
 		Log.d(TAG, "onSizeChanegd: width " + width + " height " + height);
 		super.onSizeChanged(w, h, oldw, oldh);
@@ -54,10 +54,10 @@ public class PuzzleView extends View {
 		dark.setColor(getResources().getColor(R.color.puzzle_dark));
 		
 		Paint hilite = new Paint();
-		dark.setColor(getResources().getColor(R.color.puzzle_hilite));
+		hilite.setColor(getResources().getColor(R.color.puzzle_hilite));
 		
 		Paint light = new Paint();
-		dark.setColor(getResources().getColor(R.color.puzzle_light));
+		light.setColor(getResources().getColor(R.color.puzzle_light));
 		
 		// Draw the minor gridlines
 		for (int i = 0; i < 9; i++) {
@@ -69,13 +69,15 @@ public class PuzzleView extends View {
 			
 		// Draw the major gridlines
 		for (int i = 0; i < 9; i++) {
-			if (i % 3 != 0) 
-			continue;
-			
-			canvas.drawLine(0, i * height, getWidth(), i * height, dark);
-			canvas.drawLine(0, i * height + 1, getWidth(), i * height + 1, hilite);
-			canvas.drawLine(i * width, 0, i * width, getHeight(), dark);
-			canvas.drawLine(i * width + 1, 0, i * width + 1, getHeight(), hilite);
+			if (i % 3 != 0){
+				continue;	
+			}
+			else {
+				canvas.drawLine(0, i * height, getWidth(), i * height, dark);
+				canvas.drawLine(0, i * height + 1, getWidth(), i * height + 1, hilite);
+				canvas.drawLine(i * width, 0, i * width, getHeight(), dark);
+				canvas.drawLine(i * width + 1, 0, i * width + 1, getHeight(), hilite);
+			}
 		}
 		
 		// Draw the numbers...

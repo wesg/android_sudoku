@@ -16,10 +16,11 @@ public class Game extends Activity {
 	public static final int DIFFICULTY_MEDIUM = 1;
 	public static final int DIFFICULTY_HARD = 2;
 	
+	
 	private final String easyPuzzle =
 		"360000000004230800000004200" +
 		"070460003820000014500013020" +
-		"00190000000704830000000045";
+		"001900000007048300000000045";
 	private final String mediumPuzzle =
 		"650000070000506000014000005" +
 		"007009000002314700000700800" +
@@ -46,9 +47,10 @@ public class Game extends Activity {
 		setContentView(puzzleView);
 		puzzleView.requestFocus();
 	}
+
 	
 	private int[] getPuzzle(int diff) {
-		String puz = "";
+		String puz;
 		// TODO: continue last game
 		switch (diff) {
 		case DIFFICULTY_HARD:
@@ -58,6 +60,7 @@ public class Game extends Activity {
 			puz = mediumPuzzle;
 			break;
 		case DIFFICULTY_EASY:
+		default:
 			puz = easyPuzzle;
 			break;
 		}
@@ -104,6 +107,10 @@ public class Game extends Activity {
 			Toast toast = Toast.makeText(this, R.string.no_moves_label, Toast.LENGTH_SHORT);
 			toast.setGravity(Gravity.CENTER, 0, 0);
 			toast.show();
+		} else {
+			Log.d(TAG, "showKeypad: used=" + toPuzzleString(tiles));
+			Dialog v = new Keypad(this, tiles, puzzleView);
+			v.show();
 		}
 	}
 	

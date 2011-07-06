@@ -46,3 +46,7 @@ bin/org/example/sudoku/R$anim.class
 bin/org/example/sudoku/Keypad.class
 
 bin/org/example/sudoku/Keypad$1.class
+
+.DS_Store
+
+bin/org/example/sudoku/Keypad$2.class
