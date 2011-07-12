@@ -50,3 +50,9 @@ bin/org/example/sudoku/Keypad$1.class
 .DS_Store
 
 bin/org/example/sudoku/Keypad$2.class
+
+bin/org/example/sudoku/Music.class
+
+bin/org/example/sudoku/R$raw.class
+
+bin/android_sudoku.apk

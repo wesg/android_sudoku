@@ -48,7 +48,18 @@ public class Game extends Activity {
 		puzzleView.requestFocus();
 	}
 
-	
+	@Override
+    protected void onResume() {
+    	super.onResume();
+    	Music.play(this, R.raw.game);
+    }
+    
+    @Override
+    protected void onPause() {
+    	super.onPause();
+    	Music.stop(this);
+    }
+    
 	private int[] getPuzzle(int diff) {
 		String puz;
 		// TODO: continue last game
